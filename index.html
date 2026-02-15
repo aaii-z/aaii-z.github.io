@@ -1,62 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AAII's Digital Garden</title>
+    <title>Ali Ansari - SRE & Platform Engineer</title>
+    <meta name="description"
+        content="Ali Ansari - SRE & Platform Engineer specializing in high-availability infrastructure, automated platforms, and resilient distributed systems.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         <header>
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#posts">Posts</a></li>
+                    <li><a href="#expertise">Expertise</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><button id="theme-toggle" aria-label="Toggle theme">
+                            <span class="theme-icon">☀️</span>
+                        </button></li>
                 </ul>
             </nav>
         </header>
 
-        <section id="home">
-            <h1>Hello, I'm AAII.</h1>
-            <p class="intro">Welcome to my personal corner of the web. I'm a computer engineering student and aspiring DevOps Engineer.</p>
+        <section id="home" class="hero">
+            <h1>Ali Ansari</h1>
+            <p class="subtitle">SRE & Platform Engineer | MSc Advanced Computing Science @ University of East Anglia</p>
+            <p class="intro">Focused on building high-availability infrastructure, automated platforms, and resilient
+                distributed systems.</p>
         </section>
 
-        <section id="about">
-            <h2>About Me</h2>
-            <div class="card">
-                <p>Currently, I am studying for an exam to enter university for a master's degree in computer engineering.</p>
-                <br>
-                <p>I'm focusing heavily on my studies right now, aiming to achieve my academic goals. It's been a challenging journey - tired and sometimes feeling hopeless - but I am committed to continuing this path.</p>
-                <br>
-                <p><strong>Update:</strong> It's been 3 months since my exam. While the results might not be what I hoped, I'm pivoting my focus. I am now actively searching for a DevOps Engineer position. I'm excited to apply my skills in a professional environment.</p>
+        <section id="expertise">
+            <h2>Technical Expertise</h2>
+
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <div class="expertise-icon">🏗️</div>
+                    <h3>Infrastructure & Orchestration</h3>
+                    <ul class="tech-list">
+                        <li>Kubernetes (Cilium CNI, Helm)</li>
+                        <li>VMware vSphere (vSAN, vMotion)</li>
+                        <li>Docker</li>
+                        <li>AWS</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-card">
+                    <div class="expertise-icon">⚙️</div>
+                    <h3>Automation & GitOps</h3>
+                    <ul class="tech-list">
+                        <li>Terraform</li>
+                        <li>Ansible</li>
+                        <li>ArgoCD</li>
+                        <li>GitLab CI/CD</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-card">
+                    <div class="expertise-icon">📊</div>
+                    <h3>Data & Observability</h3>
+                    <ul class="tech-list">
+                        <li>Prometheus</li>
+                        <li>Grafana</li>
+                        <li>ELK Stack</li>
+                        <li>Kafka</li>
+                        <li>PostgreSQL</li>
+                        <li>Debezium</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-card">
+                    <div class="expertise-icon">💻</div>
+                    <h3>Systems & Languages</h3>
+                    <ul class="tech-list">
+                        <li>Python</li>
+                        <li>Bash</li>
+                        <li>C++</li>
+                        <li>R</li>
+                        <li>Linux Security (CIS Benchmarks)</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
-        <section id="posts">
-            <h2>Latest Updates</h2>
-            
-            <article class="card">
-                <span class="post-date">Daily Update</span>
-                <h3>Study Grind</h3>
-                <p>These days I'm so busy I can barely update this page, but I'm committing to posting notes every day. The exam is only two months away!</p>
-            </article>
+        <section id="projects">
+            <h2>Projects</h2>
 
-            <article class="card">
-                <span class="post-date">Career Update</span>
-                <h3>Job Hunting</h3>
-                <p>Searching for a new job in a DevOps Engineer position for this year. I hope I can find a good match soon.</p>
-            </article>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-header">
+                        <h3>Kubernetes Healing Agent</h3>
+                        <span class="project-tag">Infrastructure</span>
+                    </div>
+                    <p class="project-description">Automated healing system for Kubernetes clusters with intelligent
+                        failure detection and recovery mechanisms.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Kubernetes</span>
+                        <span class="tech-badge">Terraform</span>
+                        <span class="tech-badge">Python</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <h3>English PDF Analyzer</h3>
+                        <span class="project-tag">Application</span>
+                    </div>
+                    <p class="project-description">PDF analysis tool with CEFR level classification, vocabulary
+                        highlighting, and glossary generation for language learning.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Docker</span>
+                        <span class="tech-badge">Nginx</span>
+                    </div>
+                    <a href="https://pdf.aaii.me" target="_blank" class="project-link-btn">View Project ↗</a>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <h3>GitOps Infrastructure Pipeline</h3>
+                        <span class="project-tag">DevOps</span>
+                    </div>
+                    <p class="project-description">End-to-end GitOps pipeline for infrastructure deployment with
+                        automated testing and rollback capabilities.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">ArgoCD</span>
+                        <span class="tech-badge">GitLab CI/CD</span>
+                        <span class="tech-badge">Terraform</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <h3>Observability Stack</h3>
+                        <span class="project-tag">Monitoring</span>
+                    </div>
+                    <p class="project-description">Comprehensive monitoring and observability solution with custom
+                        dashboards and alerting rules.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Prometheus</span>
+                        <span class="tech-badge">Grafana</span>
+                        <span class="tech-badge">ELK</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <div class="contact-card">
+                <p>I'm always interested in discussing new opportunities, collaborations, or interesting technical
+                    challenges.</p>
+                <div class="contact-links">
+                    <a href="https://github.com/aaii-z" target="_blank" class="contact-link">
+                        <span class="link-icon">🔗</span> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/ali-a-2422b7220/" target="_blank" class="contact-link">
+                        <span class="link-icon">🔗</span> LinkedIn
+                    </a>
+                </div>
+            </div>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2025 AAII. All rights reserved.</p>
+        <p>&copy; 2026 Ali Ansari. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.querySelector('.theme-icon');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to 'dark'
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        html.setAttribute('data-theme', currentTheme);
+        updateThemeIcon(currentTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+
+        function updateThemeIcon(theme) {
+            themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+        }
+    </script>
 </body>
+
 </html>
