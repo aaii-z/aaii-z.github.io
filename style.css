@@ -514,3 +514,43 @@ footer {
     align-self: flex-start;
   }
 }
+/* ===== STATUS BADGE (hero availability indicator) ===== */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: var(--gradient-1);
+    border: 1px solid var(--card-border);
+    border-radius: 2rem;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    margin-bottom: 1.75rem;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    min-width: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+    animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.45; transform: scale(0.75); }
+}
+
+/* ===== IN-PROGRESS PROJECT TAG ===== */
+.project-tag.in-progress {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.12), rgba(217, 119, 6, 0.12));
+    color: #b45309;
+    border-color: rgba(245, 158, 11, 0.35);
+}
+
+[data-theme="dark"] .project-tag.in-progress {
+    color: #fbbf24;
+    border-color: rgba(251, 191, 36, 0.35);
+}
